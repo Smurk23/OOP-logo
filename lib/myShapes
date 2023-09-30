@@ -1,0 +1,8 @@
+class MyShape {
+  constructor() {
+    this.color = "";
+  }
+  setColor(color) {
+    this.color = color;
+  }
+}
