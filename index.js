@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const {writeFile} = require('fs/promises');
 const MySVG = require('./lib/mySVG');
+const {Square, Triangle, Circle} = require ('./lib/myShapes');
 
 inquirer
     .prompt([
@@ -46,7 +47,7 @@ inquirer
 
         let newSVG = new MySVG ();
         newSVG.setShape(shape);
-        newSVG.setText(Text, TextColor);
+        newSVG.setText(answers.Text, answers.TextColor);
         writeFile('logo.svg', newSVG.display());
     })
     .then(() => {
