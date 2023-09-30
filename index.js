@@ -49,3 +49,9 @@ inquirer
         newSVG.setText(Text, TextColor);
         writeFile('logo.svg', newSVG.display());
     })
+    .then(() => {
+        console.log('logo.svg generation complete.');
+    })
+    .catch((err) => {
+        console.log(err);
+    });
